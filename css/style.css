@@ -1,0 +1,211 @@
+/* STYLE.CSS – FOTOGRAMM */
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.body_photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+    padding: 15px;
+}
+
+.body_photo:hover {
+    border-radius: 30%;
+    filter: drop-shadow(0px 0px 6px #FFFFFF)
+}
+
+.logo {
+    width: 500px;
+    padding: 10px;
+}
+
+header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(34, 33, 34);
+    color: rgb(191, 191, 191);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(34, 33, 34);
+    color: rgb(191, 191, 191);
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.663);
+    z-index: 3;
+}
+
+.body_photo {
+    color: white;
+    font-size: 12px;
+    padding: 4px;
+    margin: 15px;
+    background-color: rgba(40, 39, 42);
+
+}
+
+.body_photo:hover {
+    color: white;
+    font-size: 12px;
+    padding: 4px;
+    gap: 3px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.wholeframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(233, 237, 234, 0.362);
+    filter: drop-shadow(0px 0px 6px #FFFFFF)
+}
+
+.pictureFrame {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgzoom {
+    border-radius: 5%;
+    max-width: 900px;
+    max-height: 600px;
+}
+
+.underbuttondiv {
+    position: fixed;
+    margin-top: 90vh;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+@media (max-width: 6000px) and (min-width:2000px) {
+
+    .logo {
+        width: 1000px;
+    }
+
+    .body_photo {
+        width: 500px;
+        height: 500px;
+    }
+
+    .imgzoom {
+        max-width: 1700px;
+        max-height: 1700px;
+    }
+
+    .header {
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 75px;
+    }
+}
+
+@media (max-width: 900px) and (min-width:500px) {
+
+    .logo {
+        width: 250px;
+    }
+
+    .body_photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .imgzoom {
+        max-width: 450px;
+        max-height: 450px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .header {
+        font-size: 10px;
+    }
+}
+
+@media ((max-width: 500px) and (min-width:200px)) or ((max-height:500px) and (min-height:200px)) {
+
+    .logo {
+        width: 150px;
+    }
+
+    .body_photo {
+        width: 75px;
+        height: 75px;
+        margin: 15px;
+    }
+
+    .header {
+        font-size: 8px;
+
+    }
+
+    .imgzoom {
+        max-width: 300px;
+        max-height: 250px;
+    }
+
+    .EscBox {
+        position: absolute;
+        margin-left: 10px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}
