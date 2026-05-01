@@ -24,7 +24,7 @@ function render() {
 function getNoteTemplate(i) {
   return `
     <div  class='imageholder'>
-        <img onclick="toggleOverlay(${i})" id="images" class='body_photo' src="${images[i]}" alt="image">
+        <img onclick="toggleOverlay(${i})" tabindex="0" id="images" class='body_photo' src="${images[i]}" alt="image: ${i}, ${images[i]} ">
     </div> 
     <div id="overlay"></div>`;
 }
@@ -36,16 +36,19 @@ function toggleOverlay(i) {
   document.getElementById("overlay").innerHTML += `
     <div onclick="escIng()" class="wholeframe" >  
         <div>   
-            <button onclick="escIng()" id="btnEsc" class="btnEsc">Escape</button>
+            <button onclick="escIng()" id="btnEsc" class="btnEsc" alt="Escape button, brings back to main page">Escape</button>
         </div> 
         <div id="pictureFrame" class="pictureFrame">
-            <img onclick="rightClick(${i})" id="imgzoom" class="imgzoom" src="${images[i]}" alt="big image">
+            <img onclick="rightClick(${i})" id="imgzoom" class="imgzoom" src="${images[i]}" alt="big image:${i}, ${images[i]}">
         </div>
         <div class="underbuttondiv">
-           <button onclick="leftClick(${i})" id="btnPrevious" class="btnPrevious">Previous</button>
-           <button onclick="rightClick(${i})" id="btnNext" class="btnNext">Next</button>
+           <button onclick="leftClick(${i})" id="btnPrevious" class="btnPrevious" alt="Button to go to the previous picture">Previous</button>
+           <button onclick="rightClick(${i})" id="btnNext" class="btnNext" alt="Button to go to the next picture" >Next</button>
         </div>
     </div>`;
+
+    document.getElementById("images").tabIndex = -1;
+    
 }
 
 function escIng() {
