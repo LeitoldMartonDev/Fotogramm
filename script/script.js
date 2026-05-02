@@ -36,7 +36,7 @@ function toggleOverlay(i) {
   document.getElementById("overlay").innerHTML += `
     <div onclick="escIng()" class="wholeframe" >  
         <div>   
-            <button onclick="escIng()" id="btnEsc" class="btnEsc" alt="Escape button, brings back to main page">Escape</button>
+            <button onclick="escIng()" id="btnEsc" class="btnEsc" alt="Escape button" aria-label= "Escape button, brings back to main page">Escape</button>
         </div> 
         <div id="pictureFrame" class="pictureFrame">
             <img onclick="rightClick(${i})" id="imgzoom" class="imgzoom" src="${images[i]}" alt="big image:${i}, ${images[i]}">
