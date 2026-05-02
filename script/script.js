@@ -24,7 +24,7 @@ function render() {
 function getNoteTemplate(i) {
   return `
     <div  class='imageholder'>
-        <img onclick="toggleOverlay(${i})" tabindex="0" id="images" class='body_photo' src="${images[i]}" alt="image: ${i}, ${images[i]} ">
+        <img onclick="toggleOverlay(${i})" onkeydown="event.key==='Enter' && toggleOverlay(${i})" tabindex="0" id="images" class='body_photo' src="${images[i]}" alt="image: ${i}, ${images[i]} ">
     </div> 
     <div id="overlay"></div>`;
 }
