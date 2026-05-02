@@ -47,14 +47,33 @@ function toggleOverlay(i) {
         </div>
     </div>`;
 
-    document.getElementById("images").tabIndex = -1;
-    
+  tabIndexBackgroundOFF();
+}
+
+function tabIndexBackgroundOFF() {
+  let tabIndexList = document.getElementsByClassName("body_photo");
+
+  for (let index = 0; index < tabIndexList.length; index++) {
+    const singleRef = tabIndexList[index];
+    singleRef.tabIndex = -1;
+  }
+}
+
+function tabindexBackgroundOn() {
+  let tabIndexList = document.getElementsByClassName("body_photo");
+
+  for (let index = 0; index < tabIndexList.length; index++) {
+    const singleRef = tabIndexList[index];
+    singleRef.tabIndex = 0;
+  }
 }
 
 function escIng() {
   const element = document.getElementById("overlay");
   element.innerHTML = "";
   element.classList.remove("overlay");
+
+  tabindexBackgroundOn();
 }
 function rightClick() {
   currentIndex = (currentIndex + 1) % images.length;
